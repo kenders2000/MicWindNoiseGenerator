@@ -16,9 +16,11 @@ The wind velocity time histories were collected from https://www.eol.ucar.edu/pr
 
 There are three inputs to the model:
 
-T=10;%  Length of wind noise to generate (s)
-targetV=2;% Target wind velocity to generate (m/s)
-D=0.1;% the shielded wind noise model uses a 10cm Diameter shield (m)
+T - Length of wind noise to generate (s)
+
+targetV - Target mean wind velocity to generate (m/s) - The program use a dumb brute force approach to find the appropriate mean velocity - Randomly grabbing chunkcs from the database and computing the mean until it is within 0.5m/s of your target. So this may take longer at more extreme wind speeds as they are more rare in the database.
+
+D - the shielded wind noise model uses a 10cm Diameter shield (m)
 
 
 ## License
